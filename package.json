@@ -1,0 +1,21 @@
+{
+  "name": "schedule-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --experimental-specifier-resolution=node src"
+  },
+  "dependencies": {
+    "amqplib": "^0.7.1",
+    "dotenv": "^8.2.0",
+    "node-schedule": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
+  }
+}
