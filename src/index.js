@@ -7,14 +7,10 @@ const env = process.env
 const rabbitMQ_URL = env.RABBITMQ_URL
 const job = schedule
 
-amqplib.connect(rabbitMQ_URL, (error0, connection) => {
-  if (error0) {
-    throw error0
-  }
+amqplib.connect(rabbitMQ_URL, (err, connection) => {
+  if (err) throw err
   connection.createChannel((err, channel) => {
-    if (err) {
-      throw err
-    }
+    if (err) throw err
     const queue = 'schedule'
     channel.assertQueue(queue, { durable: false })
     console.log(' [*] Waiting for messages in %s. To exit press CTRL+C', queue)
